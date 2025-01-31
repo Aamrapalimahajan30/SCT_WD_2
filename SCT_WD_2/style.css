@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('assets/stopwatch\ background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container{
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+}
+/* Stopwatch heading */
+.stopwatch-heading{
+    font-size: 3rem;
+    color:black;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.stopwatch-container {
+    text-align: center;
+    padding: 20px;
+    background-color:cornsilk;
+    border-radius: 100px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-right: 30%;
+}
+
+.time-display {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color:brown;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.lap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lap-list li {
+    padding: 5px 0;
+    font-size: 1.1rem;
+    color:brown;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .time-display {
+        font-size: 2.5rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .time-display {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
